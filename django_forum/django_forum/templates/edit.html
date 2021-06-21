@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% load cloudinary %}
+
+
+<div class="content">
+<div class="post_form">
+   <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!-- <input type="text" name="name" > <br>
+    <textarea name="body" ></textarea><br>
+    <input class="form-control form-control-sm" name="image" type="file"><br> -->
+    {{form.name}}<br>
+    {{form.body}}<br>
+    {{form.image}}<br>
+    <input type="submit" value="Post" />
+
+  </form>
+</div>
+</div>
+
+<!-- <div class="container">
+    <div class="main-header">
+        <a class="title-icon" href="templates/posts.html"><img src="static/img/Ironlogo.png" class="logo"><span class="font-primary">Twiclone</span></a>
+    </div>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.name}} <br>
+            {{form.body}} <br>
+            {{form.image}} <br>
+            <input type="submit" value="Post" />
+
+        </form>
+        <div class="ditch"></div> -->
+
+{% endblock %}
